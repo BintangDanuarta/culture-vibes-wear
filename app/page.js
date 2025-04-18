@@ -39,8 +39,8 @@ export default function Home() {
 
   // Data untuk anggota tim / boards (sesuai desain gambar image_2f55d6.png)
   const teamMembers = [
-    { name: 'Bintang Danuarta', role: 'Founder', image: '/images/board/bintang.png' }, // Sesuaikan path gambar atau gunakan placeholder
     { name: 'M. Rizqi Fadhilah', role: 'Founder', image: '/images/board/qilah.png' },
+    { name: 'Bintang Danuarta', role: 'Founder', image: '/images/board/bintang.png' },
     { name: 'Rizky Fahrureza', role: 'Founder', image: '/images/board/reza.png' },
     // Tambahkan anggota lain jika ada
   ];
