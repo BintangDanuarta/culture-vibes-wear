@@ -155,8 +155,9 @@ export default function Home() {
                   prevEl: '.swiper-button-prev',
                 }}
                 autoplay={{
-                  delay: 3000,
+                  delay: 2000,
                   disableOnInteraction: false,
+                  reverseDirection: true
                 }}
                 breakpoints={{
                   640: { slidesPerView: 2.5, spaceBetween: 40 },
