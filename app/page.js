@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar';
+import BackToTopButton from "@/components/BackToTopButton";
 
 
 export default function Home() {
@@ -51,6 +52,7 @@ export default function Home() {
 
   return (
     <>
+      <BackToTopButton />
       <Navbar />
       <main className="text-white">
         {/* HERO SECTION */}
@@ -100,7 +102,7 @@ export default function Home() {
                 />
                 {/* SDG Icons Block - Horizontal row on mobile, Vertical stack on desktop */}
                 <div className="flex gap-4 justify-center md:flex-col md:items-center">
-                  <img src="/images/sdg-icons/sdg8.png" alt="SDG 4" className="w-20 h-20" />
+                  <img src="/images/sdg-icons/sdg8.png" alt="SDG 8" className="w-20 h-20" />
                   <img src="/images/sdg-icons/sdg12.png" alt="SDG 11" className="w-20 h-20" />
                   <img src="/images/sdg-icons/sdg13.png" alt="SDG 12" className="w-20 h-20" />
                 </div>
