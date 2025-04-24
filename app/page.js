@@ -100,10 +100,9 @@ export default function Home() {
                 />
                 {/* SDG Icons Block - Horizontal row on mobile, Vertical stack on desktop */}
                 <div className="flex gap-4 justify-center md:flex-col md:items-center">
-                  <img src="/images/sdg-icons/sdg3.png" alt="SDG 3" className="w-20 h-20" />
-                  <img src="/images/sdg-icons/sdg4.png" alt="SDG 4" className="w-20 h-20" />
-                  <img src="/images/sdg-icons/sdg11.png" alt="SDG 11" className="w-20 h-20" />
-                  <img src="/images/sdg-icons/sdg12.png" alt="SDG 12" className="w-20 h-20" />
+                  <img src="/images/sdg-icons/sdg8.png" alt="SDG 4" className="w-20 h-20" />
+                  <img src="/images/sdg-icons/sdg12.png" alt="SDG 11" className="w-20 h-20" />
+                  <img src="/images/sdg-icons/sdg13.png" alt="SDG 12" className="w-20 h-20" />
                 </div>
               </div>
             </div>
@@ -113,7 +112,7 @@ export default function Home() {
         <section id="document" className="bg-[#121212] py-16 px-6 md:px-16">
           <div className="max-w-screen-xl mx-auto">
             <h2 className="text-[#82af00] text-2xl md:text-3xl font-semibold mb-6 text-center">
-              Dokumentasi Lengkap Treash
+              Need to Know More?
             </h2>
             <p className="text-white text-center mb-8 max-w-2xl mx-auto">
               Pelajari lebih dalam mengenai latar belakang, fitur, dan teknologi yang digunakan oleh Treash melalui dokumen berikut.
@@ -131,77 +130,63 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FEATURES SECTION */}
         <section id="features" className="bg-[#1e1e1e] py-16 px-6 md:px-16">
           <div className="max-w-screen-xl mx-auto">
-            {/* Section Title */}
+            {/* Title */}
             <h2 className="text-[#82af00] text-2xl md:text-3xl font-semibold mb-6 text-center">
-              Fitur Unggulan Treash
+              Our Main Features
             </h2>
-            {/* Section Description */}
+
+            {/* Description */}
             <p className="text-white text-center mb-12 max-w-2xl mx-auto">
               Treash hadir dengan berbagai fitur inovatif untuk memudahkan Anda dalam mengelola sampah, mendapatkan informasi, dan berkontribusi pada lingkungan secara efektif. Geser atau biarkan otomatis!
             </p>
 
-            {/* Swiper Container */}
-            <div className="relative mb-8">
+            {/* Swiper */}
+            <div className="relative mb-5">
               <Swiper
-                // Install modules (Added Autoplay)
                 modules={[Navigation, Autoplay]}
-                spaceBetween={30} // Jarak antar slide
-                slidesPerView={1.2} // Jumlah slide terlihat di mobile (untuk efek sebagian)
-                centeredSlides={true} // Menengahkan slide yang aktif
-                loop={true} // Mengaktifkan loop (opsional, sesuai desain)
-                navigation={{ // Mengaktifkan tombol navigasi
+                spaceBetween={30}
+                slidesPerView={1.2}
+                centeredSlides={true}
+                loop={true}
+                navigation={{
                   nextEl: '.swiper-button-next',
                   prevEl: '.swiper-button-prev',
                 }}
-                // Autoplay settings (Added Autoplay prop)
                 autoplay={{
-                  delay: 3000, // Swipe tiap 3000ms (3 detik)
-                  disableOnInteraction: false, // Autoplay tidak berhenti saat user interaksi
+                  delay: 3000,
+                  disableOnInteraction: false,
                 }}
-                breakpoints={{ // Pengaturan responsif untuk slide per view dan jarak
-                  640: { // > 640px (md)
-                    slidesPerView: 2.5,
-                    spaceBetween: 40,
-                  },
-                  768: { // > 768px (lg)
-                    slidesPerView: 3.5,
-                    spaceBetween: 50,
-                  },
-                  1024: { // > 1024px (xl)
-                    slidesPerView: 4.5,
-                    spaceBetween: 60,
-                  },
-                  1280: { // > 1280px (2xl or custom)
-                    slidesPerView: 4.5,
-                    spaceBetween: 70,
-                  }
+                breakpoints={{
+                  640: { slidesPerView: 2.5, spaceBetween: 40 },
+                  768: { slidesPerView: 3.5, spaceBetween: 50 },
+                  1024: { slidesPerView: 4, spaceBetween: 50 },
+                  1280: { slidesPerView: 5, spaceBetween: 60 },
                 }}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 initialSlide={activeIndex}
                 className="pb-8"
               >
                 {features.map((feature, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="p-2 bg-gray-800 rounded-lg shadow-xl">
+                  <SwiperSlide key={index} className="overflow-visible">
+                    <div className="rounded-lg transition duration-300 hover:shadow-[0_0_20px_#82af00]">
                       <img
                         src={feature.image}
                         alt={`Fitur ${feature.title}`}
-                        className="block w-full h-auto rounded-md"
+                        className="w-full h-auto rounded-md"
                       />
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              {/* Custom Navigation Arrows */}
-              <div className="swiper-button-prev !text-gray-400 !bg-white hover:!bg-gray-200 transition-colors duration-200 rounded-full !w-10 !h-10 flex items-center justify-center !top-1/2 !-translate-y-1/2 !left-2 md:!left-4 after:!text-xl after:!font-bold" />
-              <div className="swiper-button-next !text-gray-400 !bg-white hover:!bg-gray-200 transition-colors duration-200 rounded-full !w-10 !h-10 flex items-center justify-center !top-1/2 !-translate-y-1/2 !right-2 md:!right-4 after:!text-xl after:!font-bold" />
+              {/* Custom Arrows */}
+              <div className="swiper-button-prev !text-gray-400 !bg-white hover:!bg-gray-200 transition duration-200 rounded-full !w-10 !h-10 flex items-center justify-center !top-1/2 !-translate-y-1/2 !left-2 md:!left-4 after:!text-xl after:!font-bold" />
+              <div className="swiper-button-next !text-gray-400 !bg-white hover:!bg-gray-200 transition duration-200 rounded-full !w-10 !h-10 flex items-center justify-center !top-1/2 !-translate-y-1/2 !right-2 md:!right-4 after:!text-xl after:!font-bold" />
             </div>
 
-            {/* Dynamic Feature Description below Swiper */}
+            {/* Active Slide Detail */}
             <div className="text-center mt-8">
               <h3 className="text-white text-xl md:text-2xl font-semibold mb-3">
                 {features[activeIndex].title}
@@ -213,19 +198,28 @@ export default function Home() {
           </div>
         </section>
 
+
+
         <section id="technology" className="px-4 md:px-20 py-20 bg-black text-white">
           <h2 className="text-[#82af00] text-2xl md:text-3xl font-semibold mb-12">How Treash Works?</h2>
 
           <div className="flex justify-center mb-8">
-            <img src="/images/flow.png" alt="How Treash Works Diagram" className="rounded-xl border border-white/10" />
+            <img src="/images/treash-architecture.jpg" alt="How Treash Works Diagram" className="rounded-xl border border-white/10" />
           </div>
 
           <div className="max-w-3xl mx-auto text-sm md:text-base text-justify leading-relaxed">
             <p className="mb-4">
-              Arsitektur Treash menggunakan Firebase untuk autentikasi pengguna. Aplikasi klien berinteraksi melalui API Gateway yang melakukan routing ke berbagai layanan backend di Google Cloud (Region Indonesia/Jakarta). Layanan chatbot-api dan trash-api (Vertex AI) menangani fitur chatbot edukasi dan scan jenis sampah. core-api (berjalan di Compute Engine) menjadi inti logika aplikasi.
+              Arsitektur Treash menggunakan Firebase untuk autentikasi pengguna. Aplikasi klien berkomunikasi melalui API Gateway yang bertugas melakukan routing permintaan ke berbagai layanan backend di Google Cloud. Layanan-layanan backend ini terbagi menjadi beberapa bagian fungsional yang di-deploy dan dikelola secara terpisah.
+            </p>
+            <p className='mb-4'>
+              Bagian berwarna hijau menangani fitur terkait sampah (trash-api menggunakan Vertex AI untuk kemampuan AI). Proses deployment untuk layanan ini melibatkan Cloud Build (trash-trigger) yang mengambil kode dari GitHub Repository (treash-trash), membangun image container (trash-image di Artifact Registry), dan akhirnya men-deploy-nya ke trash-api. Data yang terkait dengan sampah (kemungkinan gambar) disimpan di Cloud Storage (trash-storage), sementara data terstruktur disimpan di Cloud Firestore (treash_db).
+            </p>
+            <p className='mb-4'>
+              Bagian berwarna biru merupakan inti aplikasi (core-api berjalan di Compute Engine). Proses deployment-nya serupa dengan layanan sampah, menggunakan Cloud Build (core-trigger) dari GitHub Repository (treash-core-backend), membangun image container (core-image di Artifact Registry), dan men-deploy-nya ke core-api. Aplikasi juga memanfaatkan layanan pihak ketiga, yaitu Maps API, kemungkinan untuk fitur lokasi bank sampah.
             </p>
             <p>
-              Data terstruktur disimpan di Cloud Firestore (treash_db), sementara gambar disimpan di Cloud Storage (trash-storage). Peta lokasi bank sampah didapatkan dari Maps API. Proses deployment menggunakan Artifact Registry (treash-deploy dan treash-image) untuk menyimpan dan menarik image container. Kode sumber proyek disimpan di GitHub Repository (treash-chatbot, treash-backend, treash-trash).    </p>
+              Terakhir, bagian berwarna merah menangani fitur chatbot (chatbot-api juga menggunakan Vertex AI). Proses deployment-nya mengikuti pola yang sama dengan Cloud Build (chatbot-trigger) dari GitHub Repository (treash-chatbot), membangun image container (chatbot-image di Artifact Registry), dan men-deploy-nya ke chatbot-api. Untuk observability, arsitektur ini menggunakan Cloud Logging dan Cloud Monitoring.
+            </p>
           </div>
         </section>
 
@@ -276,7 +270,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                 Sampahmu, Masa Depan Bumi Kita.<br />Kelola dengan Bijak, Gunakan Treash Sekarang!
               </h2>
-              <button className="mt-6 w-full md:w-auto bg-lime-500 hover:bg-lime-600 text-white font-semibold py-3 px-6 rounded transition duration-300">
+              <button className="mt-6 w-full md:w-auto bg-[#82af00] hover:bg-lime-600 text-white font-semibold py-3 px-6 rounded transition duration-300">
                 Download
               </button>
             </div>
