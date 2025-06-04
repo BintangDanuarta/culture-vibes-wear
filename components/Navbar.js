@@ -19,10 +19,10 @@ const Navbar = () => {
     }, []);
 
     const navItems = [
-        { label: "About", href: "#about" },
-        { label: "Features", href: "#features" },
-        { label: "Technology", href: "#technology" },
-        { label: "Boards", href: "#boards" },
+        { label: "Tentang", href: "#about" },
+        { label: "Fitur", href: "#features" },
+        { label: "Teknologi", href: "#technology" },
+        { label: "Tim", href: "#boards" },
         { label: "Download", href: "#download" },
     ];
 
@@ -30,23 +30,23 @@ const Navbar = () => {
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
                 ${scrolled
-                    ? "bg-black/40 backdrop-blur-lg shadow-md"
+                    ? "bg-white/40 backdrop-blur-lg shadow-md"
                     : "bg-transparent"
                 }`}
         >
             <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
                 <Link href="/">
                     <Image
-                        src="/images/treash-logo.png"
-                        alt="Treash Logo"
-                        width={120}
-                        height={40}
+                        src="/images/cvw-logo-horizontal.png"
+                        alt="cvw Logo"
+                        width={200}
+                        height={80}
                         className="object-contain"
                     />
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex space-x-6 text-white font-medium">
+                <nav className="hidden md:flex space-x-6 text-[#5FB4D3] font-medium">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
