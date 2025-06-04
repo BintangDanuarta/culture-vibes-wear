@@ -35,12 +35,11 @@ export default function Home() {
 
   // Data untuk anggota tim / boards (sesuai desain gambar image_2f55d6.png)
   const teamMembers = [
-    { name: 'Bintang Danuarta', role: 'CEO & CTO', image: '/images/board/bintang.png' },
-    { name: 'Wisnu Miftahul Faris', role: 'CMO & CTO', image: '/images/board/wisnu.png' },
-    { name: 'Najla Nurul Husnina', role: 'CMO & COO', image: '/images/board/najla.png' },
-    { name: 'Vina Nurhotimah', role: 'CPO & CMO', image: '/images/board/vina.png' },
-    { name: 'Aira Nazua Artamevia', role: 'COO & CPO', image: '/images/board/aira.png' },
-    // Tambahkan anggota lain jika ada
+    { name: 'Bintang Danuarta', role: 'Informatika, CEO & CTO', image: '/images/board/bintang.png' },
+    { name: 'Wisnu Miftahul Faris', role: 'Akuntansi, CMO & CTO', image: '/images/board/wisnu.png' },
+    { name: 'Najla Nurul Husnina', role: 'Manajemen, CMO & COO', image: '/images/board/najla.png' },
+    { name: 'Vina Nurhotimah', role: 'Teknik Industri, CPO & CMO', image: '/images/board/vina.png' },
+    { name: 'Aira Nazua Artamevia', role: 'Teknik Industri, COO & CPO', image: '/images/board/aira.png' },
   ];
 
 
