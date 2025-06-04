@@ -168,7 +168,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-white text-center mb-12 max-w-2xl mx-auto">
-              Treash hadir dengan berbagai fitur inovatif untuk mengedukasi pengguna dengan berbagai video edukasi budaya
+              CultureVibesWear hadir dengan berbagai fitur inovatif untuk mengedukasi pengguna dengan berbagai video edukasi budaya
             </p>
 
             {/* Swiper */}
