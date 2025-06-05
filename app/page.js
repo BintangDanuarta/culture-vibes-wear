@@ -35,7 +35,7 @@ export default function Home() {
 
   // Data untuk anggota tim / boards (sesuai desain gambar image_2f55d6.png)
   const teamMembers = [
-    { name: 'Dr. Yadi Fahmi Arifudin, M.Pd.I.', role: 'Dosen Pembimbing, pendamping CultureVibesWear', image: '/images/board/pak-yadi.jpg' },
+    { name: 'Dr. Yadi Fahmi Arifudin, M.Pd.I.', role: 'Dosen Pembimbing, pendamping CultureVibesWear', image: '/images/board/IMG-20250605-WA0000.jpg' },
     { name: 'Bintang Danuarta', role: 'Informatika, CEO & CTO', image: '/images/board/bintang.png' },
     { name: 'Wisnu Miftahul Faris', role: 'Akuntansi, CMO & CTO', image: '/images/board/wisnu.png' },
     { name: 'Najla Nurul Husnina', role: 'Manajemen, CMO & COO', image: '/images/board/najla.png' },
